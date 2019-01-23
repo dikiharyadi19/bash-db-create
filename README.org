@@ -6,6 +6,39 @@ test postgres users and databases on the fly for quick testing and
 development. To use it, clone the repo and add =pgdevdb.sh= to your path.
 
 ** Usage postgres
+Execution acces= chmod 777 pgdevdb.sh 
+Run =pgdevdb.sh= and the first argument will be the username, user password, and database name.
+
+    #+BEGIN_SRC bash
+        λ bash pgdevdb.sh mytestdb
+    #+END_SRC
+
+To delete the =mytestdb= user and database we just created, run it with the =-d= flag.
+
+    #+BEGIN_SRC bash
+        λ bash pgdevdb.sh -d mytestdb
+    #+END_SRC
+
+To login directly to the sql shell of =mytestdb=:
+
+    #+BEGIN_SRC bash
+        λ bash pgdevdb.sh -l mytestdb
+    #+END_SRC
+
+
+** Usage mysql
+Execution acces= chmod 777 mydevdb.sh
+Run =pgdevdb.sh= and the first argument will be the username, user password, and database name.
+
+    #+BEGIN_SRC bash
+        λ bash mysql-db-create.sh dbname dbuser password`
+    #+END_SRC
+
+
+#for deb-db file 
+
+
+** Usage postgres
 
 cp dev-db /usr/bin
 Adding Permissions= chmod 777 /usr/bin/dev-db 
